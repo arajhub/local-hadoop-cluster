@@ -1,0 +1,135 @@
+#!/bin/bash
+#
+# Hadoop Master        Startup script for the Hadoop Master Server
+#
+# chkconfig: - 85 15
+# description: Startup script for the Hadoop Master Server  \
+#
+# processname: hadoop-master
+#
+HADOOP_HOME="/opt/hadoop/hadoop-2.6.0"
+HIVE_HOME="/opt/hadoop/apache-hive-1.1.1-bin"
+source  /home/araj/.bashrc
+
+start(){
+        su araj -c "cd $HADOOP_HOME/sbin"
+		echo "Starting NameNOde and Secondary Namenode"
+        su araj -c "$HADOOP_HOME/sbin/start-dfs.sh"
+        if [ $? != 0 ]; then
+			echo "Start of hadoop hdfs not successful !!!"
+			exit 1
+		fi
+
+		echo "Hdfs started successfully"
+		
+		
+		su araj -c "$HADOOP_HOME/sbin/start-yarn.sh"
+
+		if [ $? != 0 ]; then
+			echo "Start of hadoop yarn not sucessfull !!!"
+			exit 1
+		fi
+		
+		echo "YARN started successfully"
+		
+		echo "Starting Hive server2.."
+		su araj -c "nohup $HIVE_HOME/bin/hiveserver2 1>>/home/araj/start-hiveserver2-stdout.log 2>>/home/araj/start-hiveserver2-stderr.log &"
+		
+		if [ $? != 0 ]; then
+			echo "Start of hive server 2 not successful !!!"
+			exit 1
+		fi
+		echo "Hive server2 started successfully"
+		
+		echo "Starting Hive metastore.."
+		su araj -c "nohup $HIVE_HOME/bin/hive --service metastore 1>>/home/araj/start-meta-stdout.log 2>>/home/araj/start-meta-stderr.log &"
+		
+		if [ $? != 0 ]; then
+			echo "Start of hive metastore not successful !!!"
+			exit 1
+		fi
+		echo "Hive metastore started successfully"
+		
+		
+		
+		
+}
+
+stop(){
+        su araj -c "cd $HADOOP_HOME/sbin"
+		echo "Stopping NameNOde and Secondary Namenode"
+        su araj -c "$HADOOP_HOME/sbin/stop-dfs.sh"
+        if [ $? != 0 ]; then
+			echo "Stop of hadoop hdfs not successful !!!"
+			exit 1
+		fi
+
+		echo "Hdfs stopped successfully"
+		
+		
+		su araj -c "$HADOOP_HOME/sbin/stop-yarn.sh"
+
+		if [ $? != 0 ]; then
+			echo "Stop of hadoop yarn not sucessful !!!"
+			exit 1
+		fi
+		
+		echo "YARN stopped successfully"
+		
+				
+		hive2_pid=`pgrep -f org.apache.hive.service.server.HiveServer2`
+		
+		if [[ -n "$hive2_pid" ]]
+		then
+			echo "Found hivesevrer2 PID-- "$hive2_pid
+			kill $hive2_pid
+			# if process is still around, use kill -9
+			if ps -p $hive2_pid > /dev/null ; then
+				echo "Initial kill failed, killing with -9 "
+				kill -9 $hive2_pid
+			fi
+		echo "Hive server2 stopped successfully"
+		else
+			echo "Hiveserver2 process not found , HIveserver2 is not running !!!"
+		fi
+
+		meta_pid=`pgrep -f org.apache.hadoop.hive.metastore.HiveMetaStore`
+		
+		if [[ -n "$meta_pid" ]]
+		then
+			echo "Found hivesevrer2 PID-- "$meta_pid
+			kill $meta_pid
+			# if process is still around, use kill -9
+			if ps -p $meta_pid > /dev/null ; then
+				echo "Initial kill failed, killing with -9 "
+				kill -9 $meta_pid
+			fi
+		echo "Hive metastore stopped successfully"
+		else
+			echo "Hive metastore process not found , Hive metastore is not running !!!"
+		fi
+        
+		
+}
+
+restart(){
+        stop
+        start
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        restart
+        ;;
+  *)
+        echo "Usage: hadoop-master {start|stop|restart}"
+        exit 1
+esac
+
+exit 0
