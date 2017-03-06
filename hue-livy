@@ -1,0 +1,100 @@
+#!/bin/bash
+#
+# Hadoop Master        Startup script for the Hadoop Master Server
+#
+# chkconfig: - 85 15
+# description: Startup script for the HUE and Livy server  \
+#
+# processname: hue-livy
+#
+HADOOP_HOME="/opt/hadoop/hadoop-2.6.0"
+LIVY_HOME="/home/araj/livy/livy/"
+HUE_HOME="/home/araj/hue/hue"
+source  /home/araj/.bashrc
+
+start(){
+        echo "Starting Livy server"
+        su araj -c "$LIVY_HOME/bin/livy-server start"
+        if [ $? != 0 ]; then
+			echo "Start of Livy server not successful !!!"
+			exit 1
+		fi
+
+		echo "Livy Server started successfully"
+		
+		echo "Starting Hue server.."
+		su araj -c "nohup $HUE_HOME/start-hue.sh 1>>/home/araj/hue/start-hue-stdout.log 2>>/home/araj/hue/start-hue-stderr.log &"
+		
+		if [ $? != 0 ]; then
+			echo "Start of hue server not successful !!!"
+			exit 1
+		fi
+		echo "Hue server started successfully"
+			
+		
+}
+
+stop(){
+        echo "Starting Livy server"
+        su araj -c "$LIVY_HOME/bin/livy-server stop"
+        if [ $? != 0 ]; then
+			echo "Stop of Livy server not successful !!!"
+			exit 1
+		fi
+
+		echo "Livy Server stopped successfully"
+		
+		hue_supervisor=`pgrep -f "build/env/bin/supervisor"`
+		hue_server=`pgrep -f runcherrypyserver`
+		
+		if [[ -n "$hue_supervisor" ]]
+		then
+			echo "Found hue_supervisor PID-- "$hue_supervisor
+			kill $hue_supervisor
+			# if process is still around, use kill -9
+			if ps -p $hue_supervisor > /dev/null ; then
+				echo "Initial kill failed, killing with -9 "
+				kill -9 $hue_supervisor
+			fi
+		echo "Hue Supervisor stopped successfully"
+		else
+			echo "Hue Supervisor process not found , Hue Supervisor is not running !!!"
+		fi
+		
+		if [[ -n "$hue_server" ]]
+		then
+			echo "Found hue_server PID-- "$hue_server
+			kill $hue_server
+			# if process is still around, use kill -9
+			if ps -p $hue_server > /dev/null ; then
+				echo "Initial kill failed, killing with -9 "
+				kill -9 $hue_server
+			fi
+		echo "Hue hue_server stopped successfully"
+		else
+			echo "Hue hue_server process not found , Hue hue_server is not running !!!"
+		fi
+	
+}
+
+restart(){
+        stop
+        start
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        restart
+        ;;
+  *)
+        echo "Usage: hadoop-master {start|stop|restart}"
+        exit 1
+esac
+
+exit 0
