@@ -202,6 +202,27 @@ case "$1" in
   restart)
         restart
         ;;
+	
+  start_hive)
+        start_hive
+        ;;
+  stop_hive)
+        stop_hive
+        ;;
+  restart_hive)
+        restart_hive
+        ;;
+
+  start_hdfs)
+        start_hdfs
+        ;;
+  stop_hdfs)
+        stop_hdfs
+        ;;
+  restart_hdfs)
+        restart_hdfs
+        ;;
+	
   *)
         echo "Usage: hadoop-master {start|stop|restart|start_hdfs|stop_hdfs|restart_hdfs|start_hive|stop_hive|restart_hive}"
         exit 1
