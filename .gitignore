@@ -1,0 +1,5 @@
+learn-hadoop/target/
+learn-hadoop/.idea/
+*.iml
+*.ipr
+*.iws
