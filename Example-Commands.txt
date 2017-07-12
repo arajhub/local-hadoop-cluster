@@ -1,0 +1,3 @@
+echo "aaditya raj is good boy raj" | sh wc_shell/mapper.sh | sort -k1,1 | sh wc_shell/reducer.sh
+ 
+echo "My name is aaditya raj. aaditya means oldest God that is Sun" | python wc_python/mapper.py | sort -k1,1 | python wc_python/reducer.py
