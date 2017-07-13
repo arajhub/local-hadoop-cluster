@@ -1,4 +1,4 @@
-## Welcome to Local Apache Hadoop and hive setup using VWware playstation and Headless centos OS.
+﻿## Welcome to Local Apache Hadoop and hive setup using VWware playstation and Headless centos OS.
 
 Many of us are using windows as our laptop OS , trust me Hadoop and hive binaries are still not compatible with windows OS.
 Idea behind this repo is to setup a local hadoop setup to debug or run your local spark/mapreduce code locally and debug them if required.

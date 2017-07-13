@@ -1,5 +1,4 @@
-
-## Page Under Construction...
+﻿## Page Under Construction...
 
 ### Apache Hadoop Hive Local Setup 
 
@@ -21,13 +20,26 @@ Select third radio "I will install the operating system later"
 
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image004.gif "Local hadoop Image image004.gif")
 
-
-
+Click Next and select Linux Guest Operating System options and version as CentOS 64 bit
 
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image006.gif "Local hadoop Image image006.gif")
+
+Give Virtual Machine name and Location for all its files. Make sure you have enough space to accommodate this VM on windows drive. It is not required to be on C drive
+If you have free space on other drive please create a folder under that drive and give location.
+
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image007.png "Local hadoop Image image007.png")
+
+Select maximum size for disk to 20 GB , you can select more if you have more space on your system. Select second radio option which says "split virtual disk into multiple files".
+and Finish the wizard.
+
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image008.gif "Local hadoop Image image008.gif")
+
+Now your virtual machine is ready to be powered on.Before that we need to do some configuration.Select your virtual machine from left menu and click on "Edit Virtual Machine Settings"
+
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image009.png "Local hadoop Image image009.png")
+
+
+
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image010.gif "Local hadoop Image image010.gif")
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image011.png "Local hadoop Image image011.png")
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image012.gif "Local hadoop Image image012.gif")
@@ -149,66 +161,6 @@ Select third radio "I will install the operating system later"
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image128.gif "Local hadoop Image image128.gif")
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image129.png "Local hadoop Image image129.png")
 ![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image130.gif "Local hadoop Image image130.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image131.png "Local hadoop Image image131.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image132.gif "Local hadoop Image image132.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image133.png "Local hadoop Image image133.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image134.gif "Local hadoop Image image134.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image135.png "Local hadoop Image image135.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image136.gif "Local hadoop Image image136.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image137.png "Local hadoop Image image137.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image138.gif "Local hadoop Image image138.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image139.png "Local hadoop Image image139.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image140.gif "Local hadoop Image image140.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image141.png "Local hadoop Image image141.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image142.gif "Local hadoop Image image142.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image143.png "Local hadoop Image image143.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image144.gif "Local hadoop Image image144.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image145.png "Local hadoop Image image145.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image146.gif "Local hadoop Image image146.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image147.png "Local hadoop Image image147.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image148.gif "Local hadoop Image image148.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image149.png "Local hadoop Image image149.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image150.gif "Local hadoop Image image150.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image151.png "Local hadoop Image image151.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image152.gif "Local hadoop Image image152.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image153.png "Local hadoop Image image153.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image154.gif "Local hadoop Image image154.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image155.png "Local hadoop Image image155.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image156.gif "Local hadoop Image image156.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image157.png "Local hadoop Image image157.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image158.gif "Local hadoop Image image158.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image159.png "Local hadoop Image image159.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image160.gif "Local hadoop Image image160.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image161.png "Local hadoop Image image161.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image162.gif "Local hadoop Image image162.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image163.png "Local hadoop Image image163.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image164.gif "Local hadoop Image image164.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image165.png "Local hadoop Image image165.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image166.gif "Local hadoop Image image166.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image167.png "Local hadoop Image image167.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image168.gif "Local hadoop Image image168.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image169.png "Local hadoop Image image169.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image170.gif "Local hadoop Image image170.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image171.png "Local hadoop Image image171.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image172.gif "Local hadoop Image image172.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image173.png "Local hadoop Image image173.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image174.gif "Local hadoop Image image174.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image175.png "Local hadoop Image image175.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image176.gif "Local hadoop Image image176.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image177.png "Local hadoop Image image177.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image178.gif "Local hadoop Image image178.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image179.png "Local hadoop Image image179.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image180.gif "Local hadoop Image image180.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image181.png "Local hadoop Image image181.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image182.gif "Local hadoop Image image182.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image183.png "Local hadoop Image image183.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image184.gif "Local hadoop Image image184.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image185.png "Local hadoop Image image185.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image186.gif "Local hadoop Image image186.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image187.png "Local hadoop Image image187.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image188.gif "Local hadoop Image image188.gif")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image189.png "Local hadoop Image image189.png")
-![alt text](https://github.com/git-prodigy/local-hadoop-cluster/blob/master/github-pages/singlenode/images/image190.gif "Local hadoop Image image190.gif")
 
 
 Skip this error. Press Tab
@@ -837,4 +789,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we�ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
